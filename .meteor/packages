@@ -3,10 +3,21 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
-autopublish
-insecure
-coffeescript
-famono
-jade
+# Standard packages
+meteor
+webapp
+#logging
+deps
+session
+livedata
+mongo-livedata
+#ui
+spacebars
+templating
+ejson
+
+# Additional packages
 stylus
+coffeescript
+jade
+famono
