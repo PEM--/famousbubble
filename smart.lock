@@ -8,8 +8,8 @@
     "packages": {
       "famono": {
         "git": "https://github.com/raix/Meteor-famono.git",
-        "tag": "v0.3.12",
-        "commit": "2cb940bbcf8b72bb65819b813387542156e1bfea"
+        "tag": "v0.4.2",
+        "commit": "71a5076a0946fa6713006dcc4ef4945ad295cccc"
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
