@@ -1,4 +1,5 @@
-define('famous/inputs/Accumulator', ["famous/core/EventHandler","famous/transitions/Transitionable"], function(require, exports, module) {
+Famono.scope('famous/inputs/Accumulator', ["famous/core/EventHandler","famous/transitions/Transitionable"], function(require, define) {
+define(function(require, exports, module) {
     var EventHandler = require('famous/core/EventHandler');
     var Transitionable = require('famous/transitions/Transitionable');
 
@@ -58,4 +59,6 @@ define('famous/inputs/Accumulator', ["famous/core/EventHandler","famous/transiti
     };
 
     module.exports = Accumulator;
+});
+
 });

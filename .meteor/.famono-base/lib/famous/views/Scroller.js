@@ -1,4 +1,5 @@
-define('famous/views/Scroller', ["famous/core/Entity","famous/core/Group","famous/core/OptionsManager","famous/core/Transform","famous/utilities/Utility","famous/core/ViewSequence","famous/core/EventHandler"], function(require, exports, module) {
+Famono.scope('famous/views/Scroller', ["famous/core/Entity","famous/core/Group","famous/core/OptionsManager","famous/core/Transform","famous/utilities/Utility","famous/core/ViewSequence","famous/core/EventHandler"], function(require, define) {
+define(function(require, exports, module) {
     var Entity = require('famous/core/Entity');
     var Group = require('famous/core/Group');
     var OptionsManager = require('famous/core/OptionsManager');
@@ -305,4 +306,6 @@ define('famous/views/Scroller', ["famous/core/Entity","famous/core/Group","famou
     }
 
     module.exports = Scroller;
+});
+
 });

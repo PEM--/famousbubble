@@ -1,3 +1,4 @@
+Famono.scope('famous/inputs/TouchSync', ["famous/inputs/TouchTracker","famous/core/EventHandler"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/inputs/TouchSync', ["famous/inputs/TouchTracker","famous/core/EventHandler"], function(require, exports, module) {
+define(function(require, exports, module) {
     var TouchTracker = require('famous/inputs/TouchTracker');
     var EventHandler = require('famous/core/EventHandler');
 
@@ -179,4 +180,6 @@ define('famous/inputs/TouchSync', ["famous/inputs/TouchTracker","famous/core/Eve
     };
 
     module.exports = TouchSync;
+});
+
 });

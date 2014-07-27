@@ -8,16 +8,15 @@ meteor
 webapp
 #logging
 deps
-session
-livedata
-mongo-livedata
+#session
+#livedata
+#mongo-livedata
 #ui
 spacebars
 templating
 ejson
 
 # Additional packages
-stylus
 coffeescript
 jade
 famono

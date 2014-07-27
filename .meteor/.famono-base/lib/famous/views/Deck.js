@@ -1,3 +1,4 @@
+Famono.scope('famous/views/Deck', ["famous/core/Transform","famous/core/OptionsManager","famous/transitions/Transitionable","famous/utilities/Utility","famous/views/SequentialLayout"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/Deck', ["famous/core/Transform","famous/core/OptionsManager","famous/transitions/Transitionable","famous/utilities/Utility","famous/views/SequentialLayout"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
     var OptionsManager = require('famous/core/OptionsManager');
     var Transitionable = require('famous/transitions/Transitionable');
@@ -140,4 +141,6 @@ define('famous/views/Deck', ["famous/core/Transform","famous/core/OptionsManager
     };
 
     module.exports = Deck;
+});
+
 });

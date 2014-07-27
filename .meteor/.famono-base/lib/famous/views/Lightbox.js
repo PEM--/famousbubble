@@ -1,4 +1,5 @@
-define('famous/views/Lightbox', ["famous/core/Transform","famous/core/Modifier","famous/core/RenderNode","famous/utilities/Utility","famous/core/OptionsManager","famous/transitions/Transitionable","famous/transitions/TransitionableTransform"], function(require, exports, module) {
+Famono.scope('famous/views/Lightbox', ["famous/core/Transform","famous/core/Modifier","famous/core/RenderNode","famous/utilities/Utility","famous/core/OptionsManager","famous/transitions/Transitionable","famous/transitions/TransitionableTransform"], function(require, define) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
     var Modifier = require('famous/core/Modifier');
     var RenderNode = require('famous/core/RenderNode');
@@ -173,4 +174,6 @@ define('famous/views/Lightbox', ["famous/core/Transform","famous/core/Modifier",
     };
 
     module.exports = Lightbox;
+});
+
 });

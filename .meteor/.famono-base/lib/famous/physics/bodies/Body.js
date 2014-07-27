@@ -1,3 +1,4 @@
+Famono.scope('famous/physics/bodies/Body', ["famous/physics/bodies/Particle","famous/core/Transform","famous/math/Vector","famous/math/Quaternion","famous/math/Matrix"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/physics/bodies/Body', ["famous/physics/bodies/Particle","famous/core/Transform","famous/math/Vector","famous/math/Quaternion","famous/math/Matrix"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Particle = require('famous/physics/bodies/Particle');
     var Transform = require('famous/core/Transform');
     var Vector = require('famous/math/Vector');
@@ -230,4 +231,6 @@ define('famous/physics/bodies/Body', ["famous/physics/bodies/Particle","famous/c
     };
 
     module.exports = Body;
+});
+
 });

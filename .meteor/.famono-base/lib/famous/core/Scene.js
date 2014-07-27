@@ -1,3 +1,4 @@
+Famono.scope('famous/core/Scene', ["famous/core/Transform","famous/core/Modifier","famous/core/RenderNode"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/core/Scene', ["famous/core/Transform","famous/core/Modifier","famous/core/RenderNode"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
     var Modifier = require('famous/core/Modifier');
     var RenderNode = require('famous/core/RenderNode');
@@ -173,4 +174,6 @@ define('famous/core/Scene', ["famous/core/Transform","famous/core/Modifier","fam
     };
 
     module.exports = Scene;
+});
+
 });

@@ -1,3 +1,4 @@
+Famono.scope('famous/transitions/CachedMap', [], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/transitions/CachedMap', [], function(require, exports, module) {
+define(function(require, exports, module) {
     /**
      * A simple in-memory object cache.  Used as a helper for Views with
      * provider functions.
@@ -48,4 +49,6 @@ define('famous/transitions/CachedMap', [], function(require, exports, module) {
     };
 
     module.exports = CachedMap;
+});
+
 });

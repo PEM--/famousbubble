@@ -1,3 +1,4 @@
+Famono.scope('famous/modifiers/Draggable', ["famous/core/Transform","famous/transitions/Transitionable","famous/core/EventHandler","famous/math/Utilities","famous/inputs/GenericSync","famous/inputs/MouseSync","famous/inputs/TouchSync"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/modifiers/Draggable', ["famous/core/Transform","famous/transitions/Transitionable","famous/core/EventHandler","famous/math/Utilities","famous/inputs/GenericSync","famous/inputs/MouseSync","famous/inputs/TouchSync"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
     var Transitionable = require('famous/transitions/Transitionable');
     var EventHandler = require('famous/core/EventHandler');
@@ -257,4 +258,6 @@ define('famous/modifiers/Draggable', ["famous/core/Transform","famous/transition
     };
 
     module.exports = Draggable;
+});
+
 });

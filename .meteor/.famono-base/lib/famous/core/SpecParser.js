@@ -1,3 +1,4 @@
+Famono.scope('famous/core/SpecParser', ["famous/core/Transform"], function(require, define) {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -8,7 +9,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/core/SpecParser', ["famous/core/Transform"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
 
     /**
@@ -165,4 +166,6 @@ define('famous/core/SpecParser', ["famous/core/Transform"], function(require, ex
     };
 
     module.exports = SpecParser;
+});
+
 });

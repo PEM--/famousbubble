@@ -1,4 +1,5 @@
-define('famous/inputs/Gruntfile', ["load-grunt-tasks","time-grunt"], function(require, exports, module) {
+Famono.scope('famous/inputs/Gruntfile', ["load-grunt-tasks","time-grunt"], function(require, define) {
+define(function() {
 /*global module:false*/
 
 /*Generated initially from grunt-init, heavily inspired by yo webapp*/
@@ -38,4 +39,5 @@ module.exports = function(grunt) {
   ]);
 };
 
+});
 });

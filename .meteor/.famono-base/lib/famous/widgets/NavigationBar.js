@@ -1,3 +1,4 @@
+Famono.scope('famous/widgets/NavigationBar', ["famous/core/Scene","famous/core/Surface","famous/core/Transform","famous/core/View"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/widgets/NavigationBar', ["famous/core/Scene","famous/core/Surface","famous/core/Transform","famous/core/View"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Scene = require('famous/core/Scene');
     var Surface = require('famous/core/Surface');
     var Transform = require('famous/core/Transform');
@@ -139,4 +140,6 @@ define('famous/widgets/NavigationBar', ["famous/core/Scene","famous/core/Surface
     };
 
     module.exports = NavigationBar;
+});
+
 });

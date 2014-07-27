@@ -1,4 +1,5 @@
-define('famous/surfaces/SubmitInputSurface', ["famous/surfaces/InputSurface"], function(require, exports, module) {
+Famono.scope('famous/surfaces/SubmitInputSurface', ["famous/surfaces/InputSurface"], function(require, define) {
+define(function(require, exports, module) {
     var InputSurface = require('famous/surfaces/InputSurface');
 
     function SubmitInputSurface(options) {
@@ -20,4 +21,6 @@ define('famous/surfaces/SubmitInputSurface', ["famous/surfaces/InputSurface"], f
     };
 
     module.exports = SubmitInputSurface;
+});
+
 });

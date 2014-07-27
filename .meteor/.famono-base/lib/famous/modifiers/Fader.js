@@ -1,4 +1,5 @@
-define('famous/modifiers/Fader', ["famous/transitions/Transitionable","famous/core/OptionsManager"], function(require, exports, module) {
+Famono.scope('famous/modifiers/Fader', ["famous/transitions/Transitionable","famous/core/OptionsManager"], function(require, define) {
+define(function(require, exports, module) {
     var Transitionable = require('famous/transitions/Transitionable');
     var OptionsManager = require('famous/core/OptionsManager');
 
@@ -119,4 +120,6 @@ define('famous/modifiers/Fader', ["famous/transitions/Transitionable","famous/co
     };
 
     module.exports = Fader;
+});
+
 });

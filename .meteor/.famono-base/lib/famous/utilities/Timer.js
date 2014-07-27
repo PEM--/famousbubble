@@ -1,3 +1,4 @@
+Famono.scope('famous/utilities/Timer', ["famous/core/Engine"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -9,7 +10,7 @@
 // TODO fix func-style
 /*eslint func-style: [0, "declaration"] */
 
-define('famous/utilities/Timer', ["famous/core/Engine"], function(require, exports, module) {
+define(function(require, exports, module) {
     /**
      * An internal library to reproduce javascript time-based scheduling.
      *   Using standard javascript setTimeout methods can have a negative performance impact
@@ -199,5 +200,7 @@ define('famous/utilities/Timer', ["famous/core/Engine"], function(require, expor
         every : every,
         clear : clear
     };
+
+});
 
 });

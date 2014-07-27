@@ -1,3 +1,4 @@
+Famono.scope('famous/inputs/RotateSync', ["famous/inputs/TwoFingerSync"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/inputs/RotateSync', ["famous/inputs/TwoFingerSync"], function(require, exports, module) {
+define(function(require, exports, module) {
     var TwoFingerSync = require('famous/inputs/TwoFingerSync');
 
     /**
@@ -95,4 +96,6 @@ define('famous/inputs/RotateSync', ["famous/inputs/TwoFingerSync"], function(req
     };
 
     module.exports = RotateSync;
+});
+
 });

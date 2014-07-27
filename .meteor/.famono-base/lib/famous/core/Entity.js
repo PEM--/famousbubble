@@ -1,3 +1,4 @@
+Famono.scope('famous/core/Entity', [], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/core/Entity', [], function(require, exports, module) {
+define(function(require, exports, module) {
     /**
      * A singleton that maintains a global registry of Surfaces.
      *   Private.
@@ -74,4 +75,6 @@ define('famous/core/Entity', [], function(require, exports, module) {
         get: get,
         set: set
     };
+});
+
 });

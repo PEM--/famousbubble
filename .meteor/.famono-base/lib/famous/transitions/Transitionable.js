@@ -1,3 +1,4 @@
+Famono.scope('famous/transitions/Transitionable', ["famous/transitions/MultipleTransition","famous/transitions/TweenTransition"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/transitions/Transitionable', ["famous/transitions/MultipleTransition","famous/transitions/TweenTransition"], function(require, exports, module) {
+define(function(require, exports, module) {
     var MultipleTransition = require('famous/transitions/MultipleTransition');
     var TweenTransition = require('famous/transitions/TweenTransition');
 
@@ -210,4 +211,6 @@ define('famous/transitions/Transitionable', ["famous/transitions/MultipleTransit
     };
 
     module.exports = Transitionable;
+});
+
 });

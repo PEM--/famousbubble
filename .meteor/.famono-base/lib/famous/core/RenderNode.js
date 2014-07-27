@@ -1,3 +1,4 @@
+Famono.scope('famous/core/RenderNode', ["famous/core/Entity","famous/core/SpecParser"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/core/RenderNode', ["famous/core/Entity","famous/core/SpecParser"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Entity = require('famous/core/Entity');
     var SpecParser = require('famous/core/SpecParser');
 
@@ -164,4 +165,6 @@ define('famous/core/RenderNode', ["famous/core/Entity","famous/core/SpecParser"]
     };
 
     module.exports = RenderNode;
+});
+
 });

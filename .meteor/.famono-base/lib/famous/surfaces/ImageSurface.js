@@ -1,3 +1,4 @@
+Famono.scope('famous/surfaces/ImageSurface', ["famous/core/Surface"], function(require, define) {
 
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -8,7 +9,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/surfaces/ImageSurface', ["famous/core/Surface"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Surface = require('famous/core/Surface');
 
     /**
@@ -65,4 +66,6 @@ define('famous/surfaces/ImageSurface', ["famous/core/Surface"], function(require
     };
 
     module.exports = ImageSurface;
+});
+
 });

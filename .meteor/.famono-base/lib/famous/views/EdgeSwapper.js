@@ -1,3 +1,4 @@
+Famono.scope('famous/views/EdgeSwapper', ["famous/transitions/CachedMap","famous/core/Entity","famous/core/EventHandler","famous/core/Transform","famous/views/RenderController"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/EdgeSwapper', ["famous/transitions/CachedMap","famous/core/Entity","famous/core/EventHandler","famous/core/Transform","famous/views/RenderController"], function(require, exports, module) {
+define(function(require, exports, module) {
     var CachedMap = require('famous/transitions/CachedMap');
     var Entity = require('famous/core/Entity');
     var EventHandler = require('famous/core/EventHandler');
@@ -103,4 +104,6 @@ define('famous/views/EdgeSwapper', ["famous/transitions/CachedMap","famous/core/
     };
 
     module.exports = EdgeSwapper;
+});
+
 });

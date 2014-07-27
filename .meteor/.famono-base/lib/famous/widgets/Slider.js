@@ -1,3 +1,4 @@
+Famono.scope('famous/widgets/Slider', ["famous/core/Surface","famous/surfaces/CanvasSurface","famous/core/Transform","famous/core/EventHandler","famous/math/Utilities","famous/core/OptionsManager","famous/inputs/MouseSync","famous/inputs/TouchSync","famous/inputs/GenericSync"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/widgets/Slider', ["famous/core/Surface","famous/surfaces/CanvasSurface","famous/core/Transform","famous/core/EventHandler","famous/math/Utilities","famous/core/OptionsManager","famous/inputs/MouseSync","famous/inputs/TouchSync","famous/inputs/GenericSync"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Surface = require('famous/core/Surface');
     var CanvasSurface = require('famous/surfaces/CanvasSurface');
     var Transform = require('famous/core/Transform');
@@ -133,4 +134,6 @@ define('famous/widgets/Slider', ["famous/core/Surface","famous/surfaces/CanvasSu
     };
 
     module.exports = Slider;
+});
+
 });

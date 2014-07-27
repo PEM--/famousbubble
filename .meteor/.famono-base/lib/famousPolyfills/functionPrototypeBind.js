@@ -1,4 +1,5 @@
-define('famousPolyfills/functionPrototypeBind', [], function(require, exports, module) {
+Famono.scope('famousPolyfills/functionPrototypeBind', [], function(require, define) {
+define(function() {
 if (!Function.prototype.bind) {
     Function.prototype.bind = function (oThis) {
         if (typeof this !== "function") {
@@ -23,4 +24,5 @@ if (!Function.prototype.bind) {
     };
 }
 
+});
 });

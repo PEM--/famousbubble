@@ -1,3 +1,4 @@
+Famono.scope('famous/widgets/ToggleButton', ["famous/core/Surface","famous/core/EventHandler","famous/views/RenderController"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/widgets/ToggleButton', ["famous/core/Surface","famous/core/EventHandler","famous/views/RenderController"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Surface = require('famous/core/Surface');
     var EventHandler = require('famous/core/EventHandler');
     var RenderController = require('famous/views/RenderController');
@@ -156,4 +157,6 @@ define('famous/widgets/ToggleButton', ["famous/core/Surface","famous/core/EventH
     };
 
     module.exports = ToggleButton;
+});
+
 });

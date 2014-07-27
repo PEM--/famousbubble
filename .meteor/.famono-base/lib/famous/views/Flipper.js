@@ -1,3 +1,4 @@
+Famono.scope('famous/views/Flipper', ["famous/core/Transform","famous/transitions/Transitionable","famous/core/RenderNode","famous/core/OptionsManager"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/Flipper', ["famous/core/Transform","famous/transitions/Transitionable","famous/core/RenderNode","famous/core/OptionsManager"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Transform = require('famous/core/Transform');
     var Transitionable = require('famous/transitions/Transitionable');
     var RenderNode = require('famous/core/RenderNode');
@@ -146,4 +147,6 @@ define('famous/views/Flipper', ["famous/core/Transform","famous/transitions/Tran
     };
 
     module.exports = Flipper;
+});
+
 });

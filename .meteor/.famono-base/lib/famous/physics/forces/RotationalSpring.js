@@ -1,3 +1,4 @@
+Famono.scope('famous/physics/forces/RotationalSpring', ["famous/physics/forces/Spring"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -8,7 +9,7 @@
  */
 
 //TODO: test inheritance
-define('famous/physics/forces/RotationalSpring', ["famous/physics/forces/Spring"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Spring = require('famous/physics/forces/Spring');
 
     /**
@@ -86,4 +87,6 @@ define('famous/physics/forces/RotationalSpring', ["famous/physics/forces/Spring"
     };
 
     module.exports = RotationalSpring;
+});
+
 });

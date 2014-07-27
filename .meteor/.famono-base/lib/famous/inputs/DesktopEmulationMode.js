@@ -1,4 +1,5 @@
-define('famous/inputs/DesktopEmulationMode', [], function(require, exports, module) {
+Famono.scope('famous/inputs/DesktopEmulationMode', [], function(require, define) {
+define(function(require, exports, module) {
     var hasTouch = 'ontouchstart' in window;
 
     function kill(type) {
@@ -14,4 +15,6 @@ define('famous/inputs/DesktopEmulationMode', [], function(require, exports, modu
         kill('mouseup');
         kill('mouseleave');
     }
+});
+
 });

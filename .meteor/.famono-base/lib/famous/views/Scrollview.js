@@ -1,3 +1,4 @@
+Famono.scope('famous/views/Scrollview', ["famous/physics/PhysicsEngine","famous/physics/bodies/Particle","famous/physics/forces/Drag","famous/physics/forces/Spring","famous/core/EventHandler","famous/core/OptionsManager","famous/core/ViewSequence","famous/views/Scroller","famous/utilities/Utility","famous/inputs/GenericSync","famous/inputs/ScrollSync","famous/inputs/TouchSync"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/Scrollview', ["famous/physics/PhysicsEngine","famous/physics/bodies/Particle","famous/physics/forces/Drag","famous/physics/forces/Spring","famous/core/EventHandler","famous/core/OptionsManager","famous/core/ViewSequence","famous/views/Scroller","famous/utilities/Utility","famous/inputs/GenericSync","famous/inputs/ScrollSync","famous/inputs/TouchSync"], function(require, exports, module) {
+define(function(require, exports, module) {
     var PhysicsEngine = require('famous/physics/PhysicsEngine');
     var Particle = require('famous/physics/bodies/Particle');
     var Drag = require('famous/physics/forces/Drag');
@@ -481,4 +482,6 @@ define('famous/views/Scrollview', ["famous/physics/PhysicsEngine","famous/physic
     };
 
     module.exports = Scrollview;
+});
+
 });

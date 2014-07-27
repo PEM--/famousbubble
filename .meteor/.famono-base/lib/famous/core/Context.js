@@ -1,3 +1,4 @@
+Famono.scope('famous/core/Context', ["famous/core/RenderNode","famous/core/EventHandler","famous/core/ElementAllocator","famous/core/Transform","famous/transitions/Transitionable"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/core/Context', ["famous/core/RenderNode","famous/core/EventHandler","famous/core/ElementAllocator","famous/core/Transform","famous/transitions/Transitionable"], function(require, exports, module) {
+define(function(require, exports, module) {
     var RenderNode = require('famous/core/RenderNode');
     var EventHandler = require('famous/core/EventHandler');
     var ElementAllocator = require('famous/core/ElementAllocator');
@@ -224,4 +225,6 @@ define('famous/core/Context', ["famous/core/RenderNode","famous/core/EventHandle
     };
 
     module.exports = Context;
+});
+
 });

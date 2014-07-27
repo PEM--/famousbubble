@@ -1,3 +1,4 @@
+Famono.scope('famous/views/SequentialLayout', ["famous/core/OptionsManager","famous/core/Transform","famous/core/ViewSequence","famous/utilities/Utility"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/SequentialLayout', ["famous/core/OptionsManager","famous/core/Transform","famous/core/ViewSequence","famous/utilities/Utility"], function(require, exports, module) {
+define(function(require, exports, module) {
     var OptionsManager = require('famous/core/OptionsManager');
     var Transform = require('famous/core/Transform');
     var ViewSequence = require('famous/core/ViewSequence');
@@ -153,4 +154,6 @@ define('famous/views/SequentialLayout', ["famous/core/OptionsManager","famous/co
     };
 
     module.exports = SequentialLayout;
+});
+
 });

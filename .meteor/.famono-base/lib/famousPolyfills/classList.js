@@ -1,4 +1,5 @@
-define('famousPolyfills/classList', [], function(require, exports, module) {
+Famono.scope('famousPolyfills/classList', [], function(require, define) {
+define(function() {
 
 /*
  * classList.js: Cross-browser full element.classList implementation.
@@ -138,4 +139,5 @@ if (objCtr.defineProperty) {
 
 }
 
+});
 });

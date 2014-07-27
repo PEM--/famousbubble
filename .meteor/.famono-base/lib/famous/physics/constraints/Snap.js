@@ -1,3 +1,4 @@
+Famono.scope('famous/physics/constraints/Snap', ["famous/physics/constraints/Constraint","famous/math/Vector"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/physics/constraints/Snap', ["famous/physics/constraints/Constraint","famous/math/Vector"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Constraint = require('famous/physics/constraints/Constraint');
     var Vector = require('famous/math/Vector');
 
@@ -185,4 +186,6 @@ define('famous/physics/constraints/Snap', ["famous/physics/constraints/Constrain
     };
 
     module.exports = Snap;
+});
+
 });

@@ -1,4 +1,5 @@
-define('famous/surfaces/FormContainerSurface', ["famous/surfaces/ContainerSurface"], function(require, exports, module) {
+Famono.scope('famous/surfaces/FormContainerSurface', ["famous/surfaces/ContainerSurface"], function(require, define) {
+define(function(require, exports, module) {
     var ContainerSurface = require('famous/surfaces/ContainerSurface');
 
     function FormContainerSurface(options) {
@@ -17,4 +18,6 @@ define('famous/surfaces/FormContainerSurface', ["famous/surfaces/ContainerSurfac
     };
 
     module.exports = FormContainerSurface;
+});
+
 });

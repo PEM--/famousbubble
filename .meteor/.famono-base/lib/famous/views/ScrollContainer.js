@@ -1,3 +1,4 @@
+Famono.scope('famous/views/ScrollContainer', ["famous/surfaces/ContainerSurface","famous/core/EventHandler","famous/views/Scrollview","famous/utilities/Utility","famous/core/OptionsManager"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/views/ScrollContainer', ["famous/surfaces/ContainerSurface","famous/core/EventHandler","famous/views/Scrollview","famous/utilities/Utility","famous/core/OptionsManager"], function(require, exports, module) {
+define(function(require, exports, module) {
     var ContainerSurface = require('famous/surfaces/ContainerSurface');
     var EventHandler = require('famous/core/EventHandler');
     var Scrollview = require('famous/views/Scrollview');
@@ -80,4 +81,6 @@ define('famous/views/ScrollContainer', ["famous/surfaces/ContainerSurface","famo
     };
 
     module.exports = ScrollContainer;
+});
+
 });

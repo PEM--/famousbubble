@@ -1,3 +1,4 @@
+Famono.scope('famous/modifiers/StateModifier', ["famous/core/Modifier","famous/core/Transform","famous/transitions/Transitionable","famous/transitions/TransitionableTransform"], function(require, define) {
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -7,7 +8,7 @@
  * @copyright Famous Industries, Inc. 2014
  */
 
-define('famous/modifiers/StateModifier', ["famous/core/Modifier","famous/core/Transform","famous/transitions/Transitionable","famous/transitions/TransitionableTransform"], function(require, exports, module) {
+define(function(require, exports, module) {
     var Modifier = require('famous/core/Modifier');
     var Transform = require('famous/core/Transform');
     var Transitionable = require('famous/transitions/Transitionable');
@@ -262,4 +263,6 @@ define('famous/modifiers/StateModifier', ["famous/core/Modifier","famous/core/Tr
     };
 
     module.exports = StateModifier;
+});
+
 });
