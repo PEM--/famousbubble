@@ -1,7 +1,7 @@
 ###*
  * Gs: GhostTag's StyleSheet.
 ###
-class Gs
+class @Gs
 
   ###*
    * Static method for creating percentage strings.
