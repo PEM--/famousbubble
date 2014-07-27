@@ -1,35 +1,13 @@
-class GhostS
-
-  @pe: (val) -> "#{val}%"
-  @px: (val) -> "#{val}px"
-
-  constructor: ->
-    style = document.createElement 'style'
-    style.setAttribute 'media', 'screen'
-    # Hack for WebKit
-    style.appendChild document.createTextNode ''
-    document.head.appendChild style
-    @sheet = style.sheet
-    @rulesIdx = 0
-
-  add: (tag, properties) ->
-    @sheet.insertRule "#{tag} {}", @rulesIdx
-    rule = @sheet.cssRules[@rulesIdx]
-    rule.style[key] = val for key, val of properties
-    @rulesIdx++
-
 Template.index.rendered = ->
   famousPolyfills
 
-  stylesheet = new GhostS
-
-  window.truc = stylesheet
+  stylesheet = new Gs
 
   stylesheet.add 'html',
-    width: GhostS.pe 100
-    height: GhostS.pe 100
-    margin: GhostS.px 0
-    padding: GhostS.px 0
+    width: Gs.p 100
+    height: Gs.p 100
+    margin: Gs.x 0
+    padding: Gs.x 0
     overflow: 'hidden'
     # FIXME polyfill
     webkitTransformStyle: 'preserve-3d'
@@ -38,10 +16,10 @@ Template.index.rendered = ->
   stylesheet.add 'body',
     backgroundColor: '#FF851B'
     position: 'absolute'
-    width: GhostS.pe 100
-    height: GhostS.pe 100
-    margin: GhostS.px 0
-    padding: GhostS.px 0
+    width: Gs.p 100
+    height: Gs.p 100
+    margin: Gs.x 0
+    padding: Gs.x 0
     # FIXME polyfill
     webkitTransformStyle: 'preserve-3d'
     transformStyle: 'preserve-3d'
@@ -54,10 +32,10 @@ Template.index.rendered = ->
 
   stylesheet.add '.famous-container',
     position: 'absolute'
-    top: GhostS.px 0
-    left: GhostS.px 0
-    bottom: GhostS.px 0
-    right: GhostS.px 0
+    top: Gs.x 0
+    left: Gs.x 0
+    bottom: Gs.x 0
+    right: Gs.x 0
     overflow: 'visible'
     # FIXME polyfill
     webkitTransformStyle: 'preserve-3d'
@@ -69,10 +47,10 @@ Template.index.rendered = ->
 
   stylesheet.add '.famous-group',
     position: 'absolute'
-    top: GhostS.px 0
-    left: GhostS.px 0
-    bottom: GhostS.px 0
-    right: GhostS.px 0
+    top: Gs.x 0
+    left: Gs.x 0
+    bottom: Gs.x 0
+    right: Gs.x 0
     overflow: 'visible'
     # FIXME polyfill
     webkitTransformStyle: 'preserve-3d'
@@ -81,11 +59,10 @@ Template.index.rendered = ->
     webkitBackfaceVisibility: 'visible'
     backfaceVisibility: 'visible'
     pointerEvents: 'none'
-    width: GhostS.px 0
-    height: GhostS.px 0
-    margin: GhostS.px 0
-    padding: GhostS.px 0
-
+    width: Gs.x 0
+    height: Gs.x 0
+    margin: Gs.x 0
+    padding: Gs.x 0
 
   stylesheet.add '.famous-surface',
     position: 'absolute'
@@ -107,8 +84,8 @@ Template.index.rendered = ->
 
   stylesheet.add '.famous-container-group',
     position: 'relative'
-    width: GhostS.pe 100
-    height: GhostS.pe 100
+    width: Gs.p 100
+    height: Gs.p 100
 
   window.mainCtx = famous.core.Engine.createContext()
 
