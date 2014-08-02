@@ -2,40 +2,30 @@ class @AppView extends famous.core.View
   DEFAULT_OPTIONS:
     numBodies: 10
     gravity: [0, 0.0015, 0]
+    size: [400, 400]
+    origin: [.5, .5]
+
   constructor: (@options)->
     @constructor.DEFAULT_OPTIONS = @DEFAULT_OPTIONS
     super @options
     surf = new famous.core.Surface
-      size: [400, 400]
+      size: @options.size
       properties:
         backgroundColor: '#FFDC00'
         borderRadius: '8px'
-    mod = new famous.core.Modifier
-      origin: [.5, .5]
+    mod = new famous.core.Modifier origin: @options.origin
     @add(mod).add surf
     @gravity = new famous.physics.forces.Force @options.gravity
-    @ceiling = new famous.physics.constraints.Wall
-      normal: [0, 1, 0]
-      distance: 200
-      restitution: 0
-    @floor = new famous.physics.constraints.Wall
-      normal: [0, -1, 0]
-      distance: 200
-      restitution: 0
-    @left = new famous.physics.constraints.Wall
-      normal: [1, 0, 0]
-      distance: 200
-      restitution: 0
-    @right = new famous.physics.constraints.Wall
-      normal: [-1, 0, 0]
-      distance: 200
-      restitution: 0
+    @walls = new famous.physics.constraints.Walls
+      size: @options.size
+      origin: @options.origin
     @pe = new famous.physics.PhysicsEngine()
     @collision = new famous.physics.constraints.Collision restitution: 0
     @bubbleBodies = []
     famous.inputs.GenericSync.register
       'mouse': famous.inputs.MouseSync
       'touch': famous.inputs.TouchSync
+
   addDragger: ->
     @dragger = new Dragger()
     @pe.addBody @dragger.body
@@ -54,7 +44,12 @@ class @AppView extends famous.core.View
       @gravity.applyForce bubble.body
       bubble.body.getTransform()
     (@add bubble.state).add bubble.shape
-    @pe.attach [@right, @left, @floor, @ceiling], bubble.body
+    @pe.attach [
+      @walls.components[0]
+      @walls.components[1]
+      @walls.components[2]
+      @walls.components[3]
+    ] , bubble.body
     (@pe.attach @collision, @bubbleBodies, bubble.body) if i > 0
     @pe.attach @collision, [bubble.body], @dragger.body
     @bubbleBodies.push bubble.body
