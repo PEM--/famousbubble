@@ -1,4 +1,4 @@
-class @AppView extends famous.core.View
+class @BubbleBox extends famous.core.View
   DEFAULT_OPTIONS:
     numBodies: 10
     gravity: [0, 0.0015, 0]
@@ -10,9 +10,7 @@ class @AppView extends famous.core.View
     super @options
     surf = new famous.core.Surface
       size: @options.size
-      properties:
-        backgroundColor: '#FFDC00'
-        borderRadius: '8px'
+      classes: ['bubble-main-box']
     mod = new famous.core.Modifier origin: @options.origin
     @add(mod).add surf
     @gravity = new famous.physics.forces.Force @options.gravity
