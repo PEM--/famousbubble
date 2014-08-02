@@ -8,13 +8,13 @@
     "packages": {
       "famono": {
         "git": "https://github.com/raix/Meteor-famono.git",
-        "tag": "v0.4.2",
-        "commit": "71a5076a0946fa6713006dcc4ef4945ad295cccc"
+        "tag": "v0.6.7",
+        "commit": "2632d1e0090d642cffe60fa3d682f321234f4c08"
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
-        "tag": "v0.2.4",
-        "commit": "a47a4c59daaa57e7fe5f1544d4ea76d95a5c9abf"
+        "tag": "v0.2.6",
+        "commit": "ab1edd68dccae6f5e946d9a84547043816d57864"
       }
     }
   }
