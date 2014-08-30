@@ -13,6 +13,7 @@ ejson
 
 # Additional packages
 coffeescript
-famono
-jade
 ui
+waitingkuo:jade
+raix:famono
+
