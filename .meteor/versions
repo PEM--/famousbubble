@@ -22,6 +22,7 @@ meteor@1.0.2
 minifiers@1.0.2
 minimongo@1.0.1
 mongo-livedata@1.0.3
+mquandalle:jade@0.2.7
 observe-sequence@1.0.1
 ordered-dict@1.0.0
 raix:famono@0.7.4
@@ -34,5 +35,4 @@ spacebars@1.0.0
 templating@1.0.4
 ui@1.0.0
 underscore@1.0.0
-waitingkuo:jade@0.2.7
 webapp@1.0.2
