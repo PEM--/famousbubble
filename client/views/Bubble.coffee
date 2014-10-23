@@ -4,6 +4,10 @@ class @Bubble
     @shape = new famous.core.Surface
       size: [radius * 2, radius * 2]
       classes: ['bubble-bluebubble']
-      properties: borderRadius: "#{radius}px"
-    @body = new famous.physics.bodies.Circle radius: radius, mass: radius / 10
-    @state = new famous.core.Modifier origin: [.5, .5]
+      properties: borderRadius: CSSC.x radius
+    @body = new famous.physics.bodies.Circle
+      radius: radius
+      mass: 120 / radius
+    @mod = new famous.core.Modifier
+      origin: [.5, .5]
+      align: [.5, .5]
