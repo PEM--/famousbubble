@@ -7,7 +7,7 @@ class @Dragger
       properties: borderRadius: CSSC.x 2 * @RADIUS
     @body = new famous.physics.bodies.Circle
       radius: @RADIUS
-      mass: @RADIUS
+      mass: 60
     @position = [0, 0]
     @mod = new famous.core.Modifier
       origin: [.5, .5]

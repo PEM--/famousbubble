@@ -7,7 +7,7 @@ class @Bubble
       properties: borderRadius: CSSC.x radius
     @body = new famous.physics.bodies.Circle
       radius: radius
-      mass: 120 / radius
+      mass: radius / 10
     @mod = new famous.core.Modifier
       origin: [.5, .5]
       align: [.5, .5]

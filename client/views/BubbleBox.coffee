@@ -1,7 +1,8 @@
 class @BubbleBox extends famous.core.View
   DEFAULT_OPTIONS:
     numBodies: 5
-    gravity: [0, .15]
+    gravityStrength: 3
+    gravityNormal: [0, -200]
     size: [400, 400]
     origin: [.5, .5]
     align: [.5, .5]
@@ -15,25 +16,23 @@ class @BubbleBox extends famous.core.View
       origin: @options.origin
       align: @options.align
     (@add mod).add surf
-    @gravity = new famous.physics.forces.Force @options.gravity
+    @gravity = new famous.physics.forces.Repulsion
+      strength: @options.gravityStrength
+      anchor: @options.gravityNormal
     @walls = new famous.physics.constraints.Walls
       sides: famous.physics.constraints.Walls.SIDES.TWO_DIMENSIONAL
       size: @options.size
       origin: @options.origin
-      restitution: 0
+      restitution: 1
       drift: 1
     @pe = new famous.physics.PhysicsEngine()
-    @pe.on 'start', -> console.log 'PhysicEngine started'
-    @pe.on 'update', -> console.log 'PhysicEngine alive'
-    @pe.on 'end', -> console.log 'PhysicEngine stopped'
     @collision = new famous.physics.constraints.Collision
-      restitution: 0
-      drift: 1
+      restitution: .8
+      drift: 0.1
     famous.inputs.GenericSync.register
       'mouse': famous.inputs.MouseSync
       'touch': famous.inputs.TouchSync
     @addDragger()
-    @bubbleBodies = []
     @addBubbles()
   addDragger: ->
     @dragger = new Dragger()
@@ -45,15 +44,17 @@ class @BubbleBox extends famous.core.View
       @dragger.position[0] += data.delta[0]
       @dragger.position[1] += data.delta[1]
       @dragger.body.setPosition @dragger.position
-  addBubbles: =>
+  addBubbles: ->
     [0...@options.numBodies].map (i) =>
       famous.utilities.Timer.setTimeout (@addBubble.bind @, i)
       , (i + 1) * 500
-  addBubble: (i) =>
+  addBubble: (i) ->
     bubble = new Bubble()
     (@add bubble.mod).add bubble.shape
     bubble.mod.transformFrom ->
       bubble.body.getTransform()
+    @pe.attach @collision, @pe.getBodies(), bubble.body
+    @pe.attach @gravity, bubble.body
     @pe.attach [
       @walls.components[0]
       @walls.components[1]
@@ -61,7 +62,3 @@ class @BubbleBox extends famous.core.View
       @walls.components[3]
     ] , bubble.body
     @pe.addBody bubble.body
-    @gravity.applyForce [bubble.body]
-    (@pe.attach @collision, @bubbleBodies, bubble.body) if i > 0
-    @pe.attach @collision, [bubble.body], @dragger.body
-    @bubbleBodies.push bubble.body
