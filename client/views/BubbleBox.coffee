@@ -54,8 +54,8 @@ class @BubbleBox extends famous.core.View
     bubble.mod.transformFrom ->
       bubble.body.getTransform()
     @pe.attach @collision, @pe.getBodies(), bubble.body
-    @pe.attach @gravity, bubble.body
     @pe.attach [
+      @gravity
       @walls.components[0]
       @walls.components[1]
       @walls.components[2]
